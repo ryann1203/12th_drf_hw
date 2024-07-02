@@ -44,7 +44,7 @@ def singer_detail_update_delete(request, singer_id):
         return Response(serializer.data)
     
     elif request.method == 'DELETE':
-        request.delete()
+        singer.delete()
         data = {
             'deleted_singer': singer_id
         }
